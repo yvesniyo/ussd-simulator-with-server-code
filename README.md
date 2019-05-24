@@ -5,7 +5,7 @@ JavaScript pure,Css pure,PHP functional
 
 # Images of the project
 When opening the Simulator index.html
-![Image of Screen1](screen1.JPG)
+![Image of Screen1](assets/images/screen1.JPG)
 
 First make server with the file in this repo called "server.php" and then save it's location
 ![Image of Screen1](assets/images/screen2.JPG)

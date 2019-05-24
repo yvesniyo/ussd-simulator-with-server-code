@@ -437,5 +437,59 @@ function sendMoney(){
 	$text.="2. TIGO \n";
 	$text.="3. AIRTEL \n";
 	echo $text;
-}`
+}`;
 
+
+
+
+		//settings js
+		check();
+		selector(".save").addEventListener("click",save)
+		function save(){
+			var phone=selector(".phoneNumber").value;
+			var url=selector(".url").value;
+			var code=selector(".code").value;
+			var ussdData={
+				phone:phone,
+				url:url,
+				code:code,
+				sessionId:0
+			}
+			localStorage.setItem("ussdData",JSON.stringify(ussdData))
+			selector(".alert").style.display="block"
+			setTimeout(()=>{
+				selector(".alert").style.display="none"
+			},5000)
+		}
+		function check(){
+			if(localStorage.getItem("ussdData")!==undefined && localStorage.getItem("ussdData")!==null){
+				var ussdData=JSON.parse(localStorage.getItem("ussdData"))
+				selector(".phoneNumber").value=(ussdData.phone);
+				selector(".url").value=(ussdData.url);
+				selector(".code").value=(ussdData.code);
+
+			}
+		}
+		selector(".copy").addEventListener("click",()=>{
+			copyToClipboard(codes);
+		})
+
+		const copyToClipboard = (str) => {
+		  const el = document.createElement('textarea');
+		  el.value = str;
+		  document.body.appendChild(el);
+		  el.select();
+		  document.execCommand('copy');
+		  document.body.removeChild(el);
+		};
+
+		selector(".goSettings").addEventListener("click",()=>{
+			selector(".codes").style.display="none";
+
+			selector(".tempCont").style.display="block";
+		})
+		selector(".goCodes").addEventListener("click",()=>{
+			selector(".codes").style.display="block";
+
+			selector(".tempCont").style.display="none";
+		})
