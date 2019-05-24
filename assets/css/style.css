@@ -1,0 +1,306 @@
+
+*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-size: 11px;
+			color: darkslategray;
+			transition: 0.2s !important;
+			font-family:  sans-serif;
+		}
+
+		body{
+/*			background: rebeccapurple;
+*/		}
+		.phone{
+			margin-top: 50px;
+			margin-left: 50px;
+			height: 550px;
+			width: 270px;
+			border:5px solid white;border-radius: 10px;position: relative;
+			border-radius: 30px;
+			background: black;
+		}
+		.top{
+			position: absolute;
+			top:5px;
+			height: 40px;
+			width: 240px;
+			left: 10px;
+			text-align: center;
+		}
+		.top .mic{
+			height: 5px;
+			width: 60px;
+			border-radius: 5px;
+			border:1px solid green;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+		}
+		.top label{
+			font-weight: bold;
+		}
+		.screen{
+			position: absolute;
+			top: 50px;
+			left: 10px;
+			width: 240px;
+			height: 440px;
+			border:0px solid green;
+			background: white;
+			z-index: 1;
+
+		}
+		.screen .bar{
+			height: 20px;
+			width: 100%;
+			
+			background: royalblue;
+		}
+		.screen .iconsPage,.screen .ussd{
+			height: 420px;
+			width: 100%;
+			background: green;
+			padding: 10px;
+			z-index: 0;
+			position: relative;
+
+		}
+		.iconsPage{
+			border:none !important;
+			display: block;
+			background: url('../images/back.jpeg') !important;
+			background-repeat: no-repeat;
+			background-size: cover !important; 
+		}
+		.screen .ussd{
+			background: white !important;
+			padding: 0 !important;
+			display: none;
+			height: 420px;
+		}
+		.screen .iconsPage .icons{
+			height: 60px;
+			width: 60px;
+			border: 0px solid white;
+			background: none;
+			display: inline-flex;
+			margin-left: 10px;
+			text-align: center !important;
+			padding-top: 17px;
+			padding-left: 13px;
+			color: #4169e1;
+			font-weight: bold;
+			letter-spacing: 1px;
+
+		}
+		.screen .iconsPage .icons:hover{
+			cursor: pointer;
+		}
+		.btm{
+			position: absolute;
+			bottom: 5px;
+			left: 10px;
+			width: 240px;
+			height: 50px;
+			border:none;
+			text-align: center;
+		}
+		.btm button{
+			border:1px solid green;
+			background: transparent;
+			border-radius: 1px;
+			box-sizing: content-box;
+			padding: 4px 9px;
+			width: 22%;
+			margin-top: 15px;
+
+			cursor: pointer;
+			border:none;
+
+		}
+		.circleBtn{
+			border:2.5px solid white !important;
+			border-radius: 20px !important;
+			color: ;
+		}
+		.keyboard{
+			position: absolute;
+			bottom: -2px;
+			width: 100%;
+			background: white;
+			padding-top: 10px;
+			border-bottom: 0px solid green;
+			bottom: 0;
+			-webkit-box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
+			-moz-box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
+			box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
+
+		}
+		.keyboard .row button{
+			width: 30%;
+			height: 27px;
+			border:none;
+			font-size: 24px;
+			margin-bottom: 10px;
+			background: none;
+			cursor: pointer;
+			color: darkslategray;
+		}
+		.keyboard .row button:hover{
+			opacity: 0.7;
+		}
+		.send{
+			font-size: 14px !important;
+			border-radius: 50% !important;
+			border:0px solid red !important;
+			height: 50px !important;
+			width: 50px !important;
+			background:;
+			background: url('../images/playstore-icon.png') !important;
+			background-size: 100% 100% !important;
+			cursor: pointer;
+			color: white !important;
+
+		}
+		.input{
+			width: 80%;
+			height: 25px;
+			margin-bottom: 20px;
+			border:none;
+			outline: none;
+			border-bottom: 1px solid lightgreen;
+			padding-left: 5px;
+			display: inline;width: 80% !important;float: left;margin-left: 5%;
+		}
+		.input:focus{
+			border-bottom: 1px solid gray !important;
+		}
+		.delete{
+			height: 25px;
+			width: 30px;
+			border:none;
+			cursor: pointer;
+			background-color: transparent;
+			display: inline;width: 15% !important;float: right;
+		}
+		.result{
+			min-height: 160px;
+			width: 200px;
+			border:0px solid lightgray;
+			position: absolute;
+			left: 20px;
+			/*top: 10px;*/
+			top: 50px;
+			z-index: 100;
+			background: white;
+			display: none;
+			-webkit-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			-moz-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+
+		}
+		.result .textOutput{
+			position: absolute;
+			top: 2.5px;
+			left: 2.5px;
+			height: 100px;
+			width: 190px;
+			border: 0px solid lightgray;
+			padding: 8px;
+			font-size: 13px;
+			color: black !important;
+		}
+		.result .resultInputs{
+			height: 40px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			padding-bottom: 5px;
+
+
+		}
+		.result .resultInput{
+			width: 100%;
+			border:none;
+			border-bottom: 1px solid #4169e1;
+			margin-bottom: 7px;
+			width: 95%;
+		}
+		.result .resultInput:focus .keyboard{
+			
+			border:5px solid yellow;
+		}
+		.result .resultInputs button{
+			border:none;
+			color: #4169e1 !important;
+			background: transparent;
+			font-weight: bold;
+			float: right;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		.loading{
+			position: absolute;
+			height: 40px;
+			width: 160px;
+			border:0px solid green;
+			top: 200px;
+			left: 40px;
+			z-index: 9999;
+			background: white;
+			border-radius: 0px;
+			display: none;
+			-webkit-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			-moz-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+		}
+		.loader{
+			height: 30px;
+			width: 30px;
+			background: transparent;
+			display: inline-block;
+			border-radius: 50%;
+			margin-left: 10px;
+			border:5px solid transparent;
+			border-top:5px solid green;
+			border-right:5px solid green;
+			margin-top: 6px;
+			animation-name: loader;
+			animation-duration: 1s;
+			animation-delay: 0s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-direction: ;
+
+		}
+		@keyframes loader{
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		.textOutput{
+			text-align: left !important;
+		}
+		.resend,.cancel{
+			color: darkslategray !important;
+		}
+		.time{
+			margin-top: 60px;
+			margin-bottom: 200px;
+			height: 70px;
+			background-color: none ;
+			border-radius: 100px;
+			border:0px solid white;
+			opacity: 1;
+			color: black;
+		}
+		.time h1{
+			padding-top: 30px;
+			font-size: 35px;
+		    line-height: 10px;
+		    font-weight: 700;
+		    color: white;
+		    text-shadow: rgba(61, 61, 61, 0.3) 1px 1px, rgba(61, 61, 61, 0.2) 2px 2px, rgba(61, 61, 61, 0.3) 3px 3px;
+		}
