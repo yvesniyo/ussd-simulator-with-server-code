@@ -8,12 +8,12 @@ When opening the Simulator index.html
 ![Image of Screen1](screen1.JPG)
 
 First make server with the file in this repo called "server.php" and then save it's location
-![Image of Screen1](screen2.JPG)
+![Image of Screen1](assets/images/screen2.JPG)
 
-![Image of Screen3](screen3.JPG)
+![Image of Screen3](assets/images/screen3.JPG)
 
-![Image of Screen4](screen4.JPG)
+![Image of Screen4](assets/images/screen4.JPG)
 
 PHP Server Source Code Sample
-![Image of Screen5](screen5.JPG)
+![Image of Screen5](assets/images/screen5.JPG)
 
