@@ -3,8 +3,8 @@ This project helps developers to be quick in designing ussd for mobile online or
 
 JavaScript pure,Css pure,PHP functional
 
-##Contact me on:
-  *niyobuhungiro.yves@gmail.com
+## Contact me on:
+  * niyobuhungiro.yves@gmail.com
 
 # Images of the project
 When opening the Simulator index.html
