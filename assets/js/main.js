@@ -97,7 +97,6 @@
 				msg("Sending the ussd");
 				var url=ussdData.url+"?phone="+ussdData.phone+"&sessionId="+ussdData.sessionId+"&code="+ussdData.code;
 				url+="&text="+data;
-				console.log(data);
 				setTimeout(()=>{
 					loadWeb(url).then((output)=>{
 						if(output.indexOf("CON")!==-1){
