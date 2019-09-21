@@ -29,16 +29,17 @@
 
 	for(var a=0;a<buttons.length;a++){ 
 		buttons[a].addEventListener("click",(ele)=>{
-		 var data=ele.explicitOriginalTarget.childNodes[0].data.trim();
-		 if(data==="."){
-		 	sendUssd(input.value);
-		 	return;
-		 }
-		 if(mode==="keyboard"){
-		 	input.value=input.value+""+data;
-		 }else{
-		 	resultInput.value=resultInput.value+""+data;
-		 }
+			var target = ele.explicitOriginalTarget || ele.target || ele.originalTarget;
+			var data=target.childNodes[0].data.trim();
+			if(data==="."){
+				sendUssd(input.value);
+				return;
+			}
+			if(mode==="keyboard"){
+				input.value=input.value+""+data;
+			}else{
+				resultInput.value=resultInput.value+""+data;
+			}
 		 
 		})
 	}

@@ -1,5 +1,4 @@
-
-*{
+		*{
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
@@ -8,10 +7,6 @@
 			transition: 0.2s !important;
 			font-family:  sans-serif;
 		}
-
-		body{
-/*			background: rebeccapurple;
-*/		}
 		.phone{
 			margin-top: 50px;
 			margin-left: 50px;
@@ -165,25 +160,23 @@
 
 		}
 		.input{
-			width: 80%;
-			height: 25px;
-			margin-bottom: 20px;
+
 			border:none;
 			outline: none;
 			border-bottom: 1px solid lightgreen;
 			padding-left: 5px;
-			display: inline;width: 80% !important;float: left;margin-left: 5%;
+			display: inline;
+			margin-left: 5%;
 		}
 		.input:focus{
 			border-bottom: 1px solid gray !important;
 		}
 		.delete{
-			height: 25px;
-			width: 30px;
+			word-break: break-all;
 			border:none;
 			cursor: pointer;
 			background-color: transparent;
-			display: inline;width: 15% !important;float: right;
+			display: inline;
 		}
 		.result{
 			min-height: 160px;
