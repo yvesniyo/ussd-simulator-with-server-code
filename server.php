@@ -5,10 +5,10 @@ header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Max-Age: 1000');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
-$number=$_REQUEST['phone'];
+$number=$_REQUEST['phoneNumber'];
 $sessionId=$_REQUEST['sessionId'];
 $text=$_REQUEST['text'];
-$code=$_REQUEST['code'];
+$code=$_REQUEST['serviceCode'];
 
 
 

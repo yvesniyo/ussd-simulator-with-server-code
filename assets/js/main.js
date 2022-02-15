@@ -1,6 +1,5 @@
 var number = "";
 var sessionId = Math.floor(Math.random() * 1009898771);
-console.log(sessionId);
 var callBack = "";
 var buttons = selectorAll(".row button");
 var input = selector(".input")
@@ -19,6 +18,7 @@ selector(".delete").addEventListener("click", () => {
 selector(".resend").addEventListener("click", () => {
 	resend()
 })
+
 function goHome() {
 	homePage.style.display = "block";
 	ussdPage.style.display = "none";
@@ -97,7 +97,7 @@ function sendUssd(data) {
 			loading(1)
 			ussdResultWithoutKeyboard()
 			msg("Sending the ussd");
-			var url = ussdData.url + "?phone=" + ussdData.phone + "&sessionId=" + sessionId + "&code=" + ussdData.code;
+			var url = ussdData.url + "?phoneNumber=" + ussdData.phone + "&sessionId=" + sessionId + "&serviceCode=" + ussdData.code;
 			url += "&text=" + data;
 			setTimeout(() => {
 				loadWeb(url).then((output) => {
@@ -223,7 +223,7 @@ function loading(state) {
 	}
 }
 function msg(message) {
-	//console.log(message);
+	console.log(message);
 }
 
 function selector(element) {
@@ -276,10 +276,10 @@ header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Max-Age: 1000');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
-$number=$_REQUEST['phone'];
+$number=$_REQUEST['phoneNumber'];
 $sessionId=$_REQUEST['sessionId'];
 $text=$_REQUEST['text'];
-$code=$_REQUEST['code'];
+$code=$_REQUEST['serviceCode'];
 
 
 
