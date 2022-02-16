@@ -104,46 +104,47 @@ function sendUssd(data) {
 
 			console.log(url)
 			setTimeout(() => {
-				loadWeb(url).then((output) => {
-					if (output.indexOf("CON") !== -1) {
-						// server still receiving commands
-						output = output.replace(/CON/g, "")
-						output = output.replace(/\n/g, "<br />")
-						resultInputsVis(1);
-						setOutput(output)
-						showResult();
-					} else if (output.indexOf("END") !== -1) {
-						// server doesn't still needs the commands from user
-						output = output.replace(/END/g, "")
-						output = output.replace(/\n/g, "<br />")
-						resultInputsVis(0);
-						setOutput(output)
-						showResult();
-						var outEle = selector(".result")
-						var button = document.createElement("button")
-						button.innerHTML = "OK";
-						button.classList.add("endSession");
-						button.addEventListener("click", () => {
-							button.remove();
-							onlyKeyBoardMode()
-						})
-						outEle.appendChild(button)
-						sessionId = Math.floor(Math.random() * 1009898771);
-					} else {
-						setOutput("Server is not responding well <br/> make sure you use CON or END")
-						showResult();
-						resultInputsVis(0);
-						sessionId = Math.floor(Math.random() * 1009898771);
-					}
+				loadWeb(url)
+					.then((output) => {
+						if (text_contains(output, "CON")) {
+							// server still receiving commands
+							output = output.replace(/CON/g, "")
+							output = output.replace(/\n/g, "<br />")
+							resultInputsVis(1);
+							setOutput(output)
+							showResult();
+						} else if (text_contains(output, "END")) {
+							// server doesn't still needs the commands from user
+							output = output.replace(/END/g, "")
+							output = output.replace(/\n/g, "<br />")
+							resultInputsVis(0);
+							setOutput(output)
+							showResult();
+							var outEle = selector(".result")
+							var button = document.createElement("button")
+							button.innerHTML = "OK";
+							button.classList.add("endSession");
+							button.addEventListener("click", () => {
+								button.remove();
+								onlyKeyBoardMode()
+							})
+							outEle.appendChild(button)
+							sessionId = Math.floor(Math.random() * 1009898771);
+						} else {
+							setOutput("Server is not responding well <br/> make sure you use CON or END")
+							showResult();
+							resultInputsVis(0);
+							sessionId = Math.floor(Math.random() * 1009898771);
+						}
 
-					loading(0)
+						loading(0)
 
-				}).catch((error) => {
-					loading(0)
-					onlyKeyBoardMode()
-					msg(error)
-					showError("There were an error!!! " + error.status);
-				})
+					}).catch((error) => {
+						loading(0)
+						onlyKeyBoardMode()
+						msg(error)
+						showError("There were an error!!! " + error.status);
+					})
 			}, 1000)
 		} else {
 			msg("pls use correct format of ussd")
@@ -169,6 +170,11 @@ var loadWeb = (url) => {
 		xmlhttp.send();
 	})
 }
+
+function text_contains(text, search) {
+	return (text.indexOf(search) !== -1)
+}
+
 function showError(data) {
 	var alertMsg = selector(".alertMsg").style;
 	var p = selector(".alertMsg p");
