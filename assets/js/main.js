@@ -167,10 +167,40 @@ var loadWeb = (url) => {
 			}
 		};
 		xmlhttp.open("POST", url, true);
+		const params = getQueryParams(url)
+
 		xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded")
-		xmlhttp.send();
+		xmlhttp.send(params);
 	})
 }
+
+function getQueryParams(qs) {
+	qs = qs.trim()
+	if (qs.charAt() != "?") {
+		try {
+			qs = (new URL(qs)).search
+		} catch (error) {
+		}
+	}
+	qs = qs.split('+').join(' ');
+
+	var params = {},
+		tokens,
+		re = /[?&]?([^=]+)=([^&]*)/g;
+
+	while (tokens = re.exec(qs)) {
+		params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+	}
+
+	var data = new FormData();
+
+	for (const key of Object.keys(params)) {
+		data.append(key, params[key])
+	}
+
+	return data;
+}
+
 
 function text_contains(text, search) {
 	return (text.indexOf(search) !== -1)
