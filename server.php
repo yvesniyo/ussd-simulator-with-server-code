@@ -124,10 +124,6 @@ if($level==1){
 	}
 }
 
-
-
-
-
 function displayMenu(){
 	$text="CON USSD Testing \n";
 	$text.="1. Create Account \n";
