@@ -166,7 +166,8 @@ var loadWeb = (url) => {
 				reject({ "status": this.status, "response": this.responseText })
 			}
 		};
-		xmlhttp.open("GET", url, true);
+		xmlhttp.open("POST", url, true);
+		xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded")
 		xmlhttp.send();
 	})
 }
