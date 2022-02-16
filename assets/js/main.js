@@ -97,8 +97,12 @@ function sendUssd(data) {
 			loading(1)
 			ussdResultWithoutKeyboard()
 			msg("Sending the ussd");
-			var url = ussdData.url + "?phoneNumber=" + ussdData.phone + "&sessionId=" + sessionId + "&serviceCode=" + ussdData.code;
+			let code = ussdData.code
+			code = code.replace("#", "")
+			let url = ussdData.url + "?phoneNumber=" + ussdData.phone + "&sessionId=" + sessionId + "&serviceCode=" + code;
 			url += "&text=" + data;
+
+			console.log(url)
 			setTimeout(() => {
 				loadWeb(url).then((output) => {
 					if (output.indexOf("CON") !== -1) {
