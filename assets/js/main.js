@@ -133,6 +133,7 @@ function sendUssd(data) {
 						setOutput("Server is not responding well <br/> make sure you use CON or END")
 						showResult();
 						resultInputsVis(0);
+						sessionId = Math.floor(Math.random() * 1009898771);
 					}
 
 					loading(0)
