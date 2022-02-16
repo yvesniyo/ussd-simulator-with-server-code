@@ -128,6 +128,7 @@ function sendUssd(data) {
 							onlyKeyBoardMode()
 						})
 						outEle.appendChild(button)
+						sessionId = Math.floor(Math.random() * 1009898771);
 					} else {
 						setOutput("Server is not responding well <br/> make sure you use CON or END")
 						showResult();
