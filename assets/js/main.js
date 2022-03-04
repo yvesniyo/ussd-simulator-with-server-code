@@ -166,11 +166,23 @@ var loadWeb = (url) => {
 				reject({ "status": this.status, "response": this.responseText })
 			}
 		};
-		xmlhttp.open("POST", url, true);
+		const newUrl = (new URL(url))
+		const pathHost = newUrl.origin + newUrl.pathname
+		xmlhttp.open("POST", pathHost, true);
+
 		const params = getQueryParams(url)
 
-		xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded")
-		xmlhttp.send(params);
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+		let urlEncodedData = "",
+			urlEncodedDataPairs = [], name;
+		for (name in params) {
+			urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(params[name]));
+		}
+
+		urlEncodedData = urlEncodedDataPairs.join("&")
+		xmlhttp.send(urlEncodedData);
+
 	})
 }
 
@@ -192,10 +204,10 @@ function getQueryParams(qs) {
 		params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
 	}
 
-	var data = new FormData();
+	var data = new Object();
 
 	for (const key of Object.keys(params)) {
-		data.append(key, params[key])
+		data[key] = params[key]
 	}
 
 	return data;
