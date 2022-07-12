@@ -1,153 +1,198 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="1000000000" >
-	<title>USSD PHONE SIMULATOR</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/prism.css">
-	<style>
-		.result{
-			word-break: break-all;
-		}
-	</style>
-</head>
-<body style="padding-top: 20px;">
-	<div class="nav" style="">
-		<h1 style=""><a href="#">USSD Chamble</a></h1>
-		<ul >
-			<li><a href="#" class="goSettings">Settings</a></li>
-			<li><a href="#" class="goCodes">PHPServerCodes</a></li>
-			<li><a href="#">About me</a></li>
-			<li><a href="#">Contact me</a></li>
-			<li><a href="#">Ask Help?</a></li>
-		</ul>
-	</div>
-	<div style="" class="phone">
-		<div class="volume"></div>
-		<div class="power"></div>
-		<div class="top">
-			<center>
-				<div class="mic"></div>
-			</center>
-			<label style="color: white">YPHONE</label>
-		</div>
-		<div class="screen">
-			<div class="loading">
-				<div class="loader"></div>
-				<label style="float: right;padding-top: 10px;padding-right: 10px;">USSD code running</label>
-			</div>
-			<div class="bar"></div>
-			<div class="iconsPage" style="">
-				<center>
-					<div class="row">
-						<div class="time">
-							<h1 class="clock">--:--:--</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="1000000000" />
+    <title>USSD PHONE SIMULATOR</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <style>
+      .result {
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body style="padding-top: 20px">
+    <div class="nav" style="">
+      <h1 style=""><a href="#">USSD Chamble</a></h1>
+      <ul>
+        <li><a href="#" class="goSettings">Settings</a></li>
+        <li><a href="#" class="goCodes">PHPServerCodes</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Contact me</a></li>
+        <li><a href="#">Ask Help?</a></li>
+      </ul>
+    </div>
+    <div style="" class="phone">
+      <div class="volume"></div>
+      <div class="power"></div>
+      <div class="top">
+        <center>
+          <div class="mic"></div>
+        </center>
+        <label style="color: white">YPHONE</label>
+      </div>
+      <div class="screen">
+        <div class="loading">
+          <div class="loader"></div>
+          <label style="float: right; padding-top: 10px; padding-right: 10px"
+            >USSD code running</label
+          >
+        </div>
+        <div class="bar"></div>
+        <div class="iconsPage" style="">
+          <center>
+            <div class="row">
+              <div class="time">
+                <h1 class="clock">--:--:--</h1>
+              </div>
+              <p
+                style="
+                  color: white;
+                  margin-top: -40px;
+                  margin-bottom: 40px;
+                  font-size: 13px;
+                  letter-spacing: 1px;
+                "
+              >
+                Made by YvesNiyobuhungiro
+              </p>
+            </div>
+            <div
+              class="icons"
+              style="
+                background: url('assets/images/menu.png');
+                background-size: 100% 100%;
+              "
+            ></div>
+            <div
+              class="icons"
+              onclick="goUssd()"
+              style="
+                background: url('assets/images/playstore-icon.png');
+                background-size: 100% 100%;
+              "
+            ></div>
+            <div
+              class="icons"
+              style="
+                background: url('assets/images/sms.png');
+                background-size: 100% 100%;
+              "
+            ></div>
+          </center>
+        </div>
+        <div class="ussd">
+          <center>
+            <div class="result">
+              <div class="textOutput"></div>
+              <div class="resultInputs">
+                <input type="text" name="" class="resultInput" autofocus="" />
+                <button class="resend">SEND</button>
+                <button class="cancel">CANCEL</button>
+              </div>
+            </div>
+          </center>
 
-						</div>
-						<p style="color: white;margin-top: -40px;margin-bottom: 40px;font-size: 13px;letter-spacing: 1px;">Made by YvesNiyobuhungiro</p>
-					</div>
-					<div class="icons" style="background: url('assets/images/menu.png');background-size: 100% 100%;"></div>
-					<div class="icons" onclick="goUssd()" style="background: url('assets/images/playstore-icon.png');background-size: 100% 100%;"></div>
-					<div class="icons" style="background: url('assets/images/sms.png');background-size: 100% 100%;"></div>
-				</center>
-			</div>
-			<div class="ussd">
-				<center>
-					<div class="result">
-						<div class="textOutput">
-							
-						</div>
-						<div class="resultInputs">
-							<input type="text" name="" class="resultInput" autofocus="">
-							<button class="resend">SEND</button>
-							<button class="cancel">CANCEL</button>
-						</div>
-					</div>
-				</center>
-				
-				<div class="keyboard">
-					<center>
-						<div class="row1" style="height: 50px;">
-							<input autofocus="" value="*454#"   type="text" name="" class="input">
-							<button class="delete">X</button>
-						</div>
+          <div class="keyboard">
+            <center>
+              <div class="row1" style="height: 50px">
+                <input
+                  autofocus=""
+                  value="*454#"
+                  type="text"
+                  name=""
+                  class="input"
+                />
+                <button class="delete">X</button>
+              </div>
 
-						<div class="row">
-							<button>1</button>
-							<button>2</button>
-							<button>3</button>
-						</div>
-						<div class="row">
-							<button>4</button>
-							<button>5</button>
-							<button>6</button>
-						</div>
-						<div class="row">
-							<button>7</button>
-							<button>8</button>
-							<button>9</button>
-						</div>
-						<div class="row">
-							<button>*</button>
-							<button>0 <sup>+</sup></button>
-							<button>#</button>
-						</div>
-						<div class="row">
-							<button class="send">.</button>
-						</div>
-					</center>
-				</div>
-			</div>
-		</div>
-		<div class="btm">
-			<button style="transform: rotate(0deg);">|==|</button>
-			<button class="circleBtn" onclick="goHome()">Home</button>
-			<button><=</button>
-		</div>
-	</div>
-	<div style="" class="tempCont">
-		<div class="colorCont">
-			<h1>USSD Tool</h1>
-			<p>
-				This project was made for developers by develper. <br />
-				Please feel free to ask me anything :)
-			</p>
-		</div>
-		<div class="settings">
-			<h1>Settings</h1>
-			<div class="form">
-				<div class="alert">
-					<p>Data has been successfuly stored.</p>
-				</div>
-				<div class="alertMsg">
-					<p>Data has been successfuly stored.</p>
-				</div>
-				<div class="row">
-					<label>Phone Number:</label>
-					<input type="text" name="" placeholder="Phone" autofocus="" class="phoneNumber">
-				</div>
-				<div class="row">
-					<label>Call Back URL:</label>
-					<input type="text" name="" placeholder="URL" class="url">
-				</div>
-				<div class="row">
-					<label>Service Code:</label>
-					<input type="text" name="" placeholder="Service Code" class="code">
-				</div>
-				<div class="row4">
-					<button class="save">Save</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="codes" >
-		<div class="header">
-			<h1>Sample PHP code server for ussd</h1>
-			<button class="copy" >Copy</button>
-		</div>
-		<div class="container">
-			<pre class="" >
+              <div class="row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+              </div>
+              <div class="row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+              </div>
+              <div class="row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+              </div>
+              <div class="row">
+                <button>*</button>
+                <button>0 <sup>+</sup></button>
+                <button>#</button>
+              </div>
+              <div class="row">
+                <button class="send">.</button>
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="btm">
+        <button style="transform: rotate(0deg)">|==|</button>
+        <button class="circleBtn" onclick="goHome()">Home</button>
+        <button><=</button>
+      </div>
+    </div>
+    <div style="" class="tempCont">
+      <div class="colorCont">
+        <h1>USSD Tool</h1>
+        <p>
+          This project was made for developers by developer. <br />
+          Please feel free to ask me anything :)
+        </p>
+      </div>
+      <div class="settings">
+        <h1>Settings</h1>
+        <div class="form">
+          <div class="alert">
+            <p>Data has been successfuly stored.</p>
+          </div>
+          <div class="alertMsg">
+            <p>Data has been successfuly stored.</p>
+          </div>
+          <div class="row">
+            <label>Phone Number:</label>
+            <input
+              type="text"
+              name=""
+              placeholder="Phone"
+              autofocus=""
+              class="phoneNumber"
+            />
+          </div>
+          <div class="row">
+            <label>Call Back URL:</label>
+            <input type="text" name="" placeholder="URL" class="url" />
+          </div>
+          <div class="row">
+            <label>Service Code:</label>
+            <input
+              type="text"
+              name=""
+              placeholder="Service Code"
+              class="code"
+            />
+          </div>
+          <div class="row4">
+            <button class="save">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="codes">
+      <div class="header">
+        <h1>Sample PHP code server for ussd</h1>
+        <button class="copy">Copy</button>
+      </div>
+      <div class="container">
+        <pre class="">
 				<code class="language-php">
 header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
@@ -304,10 +349,9 @@ function sendMoney(){
 }
 			  	</code>
 			</pre>
-				
-		</div>	
-	</div>
-	<script type="text/javascript" src="assets/js/prism.js"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>	
-</body>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
 </html>
