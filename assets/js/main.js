@@ -199,7 +199,7 @@ function getQueryParams(qs) {
   if (qs.charAt() != "?") {
     try {
       qs = new URL(qs).search;
-    } catch (error) {}
+    } catch (error) { }
   }
   qs = qs.split("+").join(" ");
 
@@ -242,6 +242,31 @@ function showResult() {
 }
 
 selector(".resultInput").addEventListener("focus", resultInputFocus);
+
+//Disable delete btn when resultInput class element attr has these events
+selector(".resultInput").addEventListener("input", DisableDelBtn);
+selector(".resultInput").addEventListener("focus", DisableDelBtn);
+
+
+//Disable delete btn when .input class element attr has these events
+selector(".input").addEventListener("input", DisableDelBtns);
+selector(".input").addEventListener("focus", DisableDelBtns);
+
+function DisableDelBtns() {
+  if (selector(".input").value == "") {
+    selector(".delete").style.display = "none";
+  } else {
+    selector(".delete").style.display = "inline";
+  }
+}
+//Disable delete btn when input is empty
+function DisableDelBtn() {
+  if (selector(".resultInput").value == "") {
+    selector(".delete").style.display = "none";
+  } else {
+    selector(".delete").style.display = "inline";
+  }
+}
 
 function resultInputFocus() {
   selector(".result").style.top = "10px";

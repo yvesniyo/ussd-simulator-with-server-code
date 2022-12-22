@@ -1,59 +1,69 @@
-		*{
+		* {
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
 			font-size: 11px;
 			color: darkslategray;
 			transition: 0.2s !important;
-			font-family:  sans-serif;
+			font-family: sans-serif;
 		}
-		.phone{
+
+		.phone {
 			margin-top: 50px;
 			margin-left: 50px;
 			height: 550px;
 			width: 270px;
-			border:5px solid white;border-radius: 10px;position: relative;
+			border: 5px solid white;
+			border-radius: 10px;
+			position: relative;
 			border-radius: 30px;
 			background: black;
 		}
-		.top{
+
+		.top {
 			position: absolute;
-			top:5px;
+			top: 5px;
 			height: 40px;
 			width: 240px;
 			left: 10px;
 			text-align: center;
 		}
-		.top .mic{
+
+		.top .mic {
 			height: 5px;
 			width: 60px;
 			border-radius: 5px;
-			border:1px solid green;
+			border: 1px solid green;
 			margin-top: 10px;
 			margin-bottom: 10px;
 
 		}
-		.top label{
+
+		.top label {
 			font-weight: bold;
 		}
-		.screen{
+
+		.screen {
 			position: absolute;
 			top: 50px;
 			left: 10px;
 			width: 240px;
 			height: 440px;
-			border:0px solid green;
+			border: 0px solid green;
 			background: white;
 			z-index: 1;
 
 		}
-		.screen .bar{
+
+		.screen .bar {
 			height: 20px;
 			width: 100%;
-			
+
 			background: royalblue;
 		}
-		.screen .iconsPage,.screen .ussd{
+
+		.screen .iconsPage,
+		.screen .ussd {
 			height: 420px;
 			width: 100%;
 			background: green;
@@ -62,20 +72,23 @@
 			position: relative;
 
 		}
-		.iconsPage{
-			border:none !important;
+
+		.iconsPage {
+			border: none !important;
 			display: block;
 			background: url('../images/back.jpeg') !important;
 			background-repeat: no-repeat;
-			background-size: cover !important; 
+			background-size: cover !important;
 		}
-		.screen .ussd{
+
+		.screen .ussd {
 			background: white !important;
 			padding: 0 !important;
 			display: none;
 			height: 420px;
 		}
-		.screen .iconsPage .icons{
+
+		.screen .iconsPage .icons {
 			height: 60px;
 			width: 60px;
 			border: 0px solid white;
@@ -90,20 +103,23 @@
 			letter-spacing: 1px;
 
 		}
-		.screen .iconsPage .icons:hover{
+
+		.screen .iconsPage .icons:hover {
 			cursor: pointer;
 		}
-		.btm{
+
+		.btm {
 			position: absolute;
 			bottom: 5px;
 			left: 10px;
 			width: 240px;
 			height: 50px;
-			border:none;
+			border: none;
 			text-align: center;
 		}
-		.btm button{
-			border:1px solid green;
+
+		.btm button {
+			border: 1px solid green;
 			background: transparent;
 			border-radius: 1px;
 			box-sizing: content-box;
@@ -112,15 +128,16 @@
 			margin-top: 15px;
 
 			cursor: pointer;
-			border:none;
+			border: none;
 
 		}
-		.circleBtn{
-			border:2.5px solid white !important;
+
+		.circleBtn {
+			border: 2.5px solid white !important;
 			border-radius: 20px !important;
-			color: ;
 		}
-		.keyboard{
+
+		.keyboard {
 			position: absolute;
 			bottom: -2px;
 			width: 100%;
@@ -128,84 +145,109 @@
 			padding-top: 10px;
 			border-bottom: 0px solid green;
 			bottom: 0;
-			-webkit-box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
-			-moz-box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
-			box-shadow: 1px -6px 8px 5px rgba(0,0,0,0.06);
+			-webkit-box-shadow: 1px -6px 8px 5px rgba(0, 0, 0, 0.06);
+			-moz-box-shadow: 1px -6px 8px 5px rgba(0, 0, 0, 0.06);
+			box-shadow: 1px -6px 8px 5px rgba(0, 0, 0, 0.06);
 
 		}
-		.keyboard .row button{
+
+		.row1 {
+			height: 50px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.keyboard .row button {
 			width: 30%;
+			outline: none;
 			height: 27px;
-			border:none;
+			border: none;
 			font-size: 24px;
 			margin-bottom: 10px;
 			background: none;
 			cursor: pointer;
 			color: darkslategray;
 		}
-		.keyboard .row button:hover{
+
+		.keyboard .row button:hover {
 			opacity: 0.7;
 		}
-		.send{
+
+		.send {
 			font-size: 14px !important;
 			border-radius: 50% !important;
-			border:0px solid red !important;
+			border: 0px solid red !important;
 			height: 50px !important;
 			width: 50px !important;
-			background:;
 			background: url('../images/playstore-icon.png') !important;
 			background-size: 100% 100% !important;
 			cursor: pointer;
 			color: white !important;
 
 		}
-		.input{
 
-			border:none;
+		.input {
+			border: none;
 			outline: none;
-			border-bottom: 1px solid lightgreen;
+			border-bottom: 1px solid #90ee9070;
 			padding-left: 5px;
 			display: inline;
-			margin-left: 5%;
+			width: 60%;
+			height: 69%;
+			text-align: center;
+			font-size: 2.5em;
 		}
-		.input:focus{
+
+		.input:focus {
 			border-bottom: 1px solid gray !important;
 		}
-		.delete{
+
+		.delete {
 			word-break: break-all;
-			border:none;
+			border: none;
 			cursor: pointer;
 			background-color: transparent;
 			display: inline;
+			height: fit-content;
+			background: #9e9e9e69;
+			text-align: white;
+			color: darkslategrey;
+			margin: auto 0;
+			border-radius: 15px 0 0 15px;
+			font-size: 10px;
+			padding: 4px 7px;
 		}
-		.result{
-			min-height: 160px;
+
+		.result {
+			/* min-height: 190px; */
+			min-height: 35%;
 			width: 200px;
-			border:0px solid lightgray;
+			border: 0px solid lightgray;
 			position: absolute;
 			left: 20px;
-			/*top: 10px;*/
 			top: 50px;
 			z-index: 100;
 			background: white;
 			display: none;
-			-webkit-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
-			-moz-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
-			box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			-webkit-box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
+			-moz-box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
+			box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
 
 		}
-		.result .textOutput{
+
+		.result .textOutput {
 			position: absolute;
 			top: 2.5px;
 			left: 2.5px;
-			height: 100px;
+			height: fit-content;
 			width: 190px;
 			border: 0px solid lightgray;
 			padding: 8px;
 			font-size: 13px;
 			color: black !important;
 		}
-		.result .resultInputs{
+
+		.result .resultInputs {
 			height: 40px;
 			width: 100%;
 			position: absolute;
@@ -214,19 +256,23 @@
 
 
 		}
-		.result .resultInput{
+
+		.result .resultInput {
 			width: 100%;
-			border:none;
+			outline: none;
+			border: none;
 			border-bottom: 1px solid #4169e1;
 			margin-bottom: 7px;
-			width: 95%;
+			width: 90%;
 		}
-		.result .resultInput:focus .keyboard{
-			
-			border:5px solid yellow;
+
+		.result .resultInput:focus .keyboard {
+
+			border: 5px solid yellow;
 		}
-		.result .resultInputs button{
-			border:none;
+
+		.result .resultInputs button {
+			border: none;
 			color: #4169e1 !important;
 			background: transparent;
 			font-weight: bold;
@@ -234,123 +280,148 @@
 			margin-right: 10px;
 			cursor: pointer;
 		}
-		.loading{
+
+		.loading {
 			position: absolute;
 			height: 40px;
 			width: 160px;
-			border:0px solid green;
+			border: 0px solid green;
 			top: 200px;
 			left: 40px;
 			z-index: 9999;
 			background: white;
 			border-radius: 0px;
 			display: none;
-			-webkit-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
-			-moz-box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
-			box-shadow: 3px 0px 5px 5px rgba(0,0,0,0.21);
+			-webkit-box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
+			-moz-box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
+			box-shadow: 3px 0px 5px 5px rgba(0, 0, 0, 0.21);
 		}
-		.loader{
+
+		.loader {
 			height: 30px;
 			width: 30px;
 			background: transparent;
 			display: inline-block;
 			border-radius: 50%;
 			margin-left: 10px;
-			border:5px solid transparent;
-			border-top:5px solid green;
-			border-right:5px solid green;
+			border: 5px solid transparent;
+			border-top: 5px solid green;
+			border-right: 5px solid green;
 			margin-top: 6px;
 			animation-name: loader;
 			animation-duration: 1s;
 			animation-delay: 0s;
 			animation-timing-function: linear;
 			animation-iteration-count: infinite;
-			animation-direction: ;
 
 		}
-		@keyframes loader{
-			100%{
+
+		@keyframes loader {
+			100% {
 				transform: rotate(360deg);
 			}
 		}
-		.textOutput{
+
+		.textOutput {
 			text-align: left !important;
 		}
-		.resend,.cancel{
+
+		.resend,
+		.cancel {
 			color: darkslategray !important;
 		}
-		.time{
+
+		.time {
 			margin-top: 60px;
 			margin-bottom: 200px;
 			height: 70px;
-			background-color: none ;
+			background-color: none;
 			border-radius: 100px;
-			border:0px solid white;
+			border: 0px solid white;
 			opacity: 1;
 			color: black;
 		}
-		.time h1{
+
+		.time h1 {
 			padding-top: 30px;
 			font-size: 35px;
-		    line-height: 10px;
-		    font-weight: 700;
-		    color: white;
-		    text-shadow: rgba(61, 61, 61, 0.3) 1px 1px, rgba(61, 61, 61, 0.2) 2px 2px, rgba(61, 61, 61, 0.3) 3px 3px;
+			line-height: 10px;
+			font-weight: 700;
+			color: white;
+			text-shadow: rgba(61, 61, 61, 0.3) 1px 1px, rgba(61, 61, 61, 0.2) 2px 2px, rgba(61, 61, 61, 0.3) 3px 3px;
 		}
-				pre[class*="language-"].line-numbers {
-		    position: relative;
-		    padding-left: 0px !important;
-		    counter-reset: linenumber;
+
+		pre[class*="language-"].line-numbers {
+			position: relative;
+			padding-left: 0px !important;
+			counter-reset: linenumber;
 		}
-		.phone{
-			border: 5px solid rgba(0,0,0,0.09) !important;
+
+		.phone {
+			border: 5px solid rgba(0, 0, 0, 0.09) !important;
 		}
-		.tempCont,.codes{
-			position: absolute;top: 70px;left: 420px;height: 550px;width: 450px;background: white;border-radius: 20px;overflow: hidden;
-			-webkit-box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.04);
-			-moz-box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.09);
-			box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.09);
+
+		.tempCont,
+		.codes {
+			position: absolute;
+			top: 70px;
+			left: 420px;
+			height: 550px;
+			width: 450px;
+			background: white;
+			border-radius: 20px;
+			overflow: hidden;
+			-webkit-box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.04);
+			-moz-box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.09);
+			box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.09);
 		}
-		.codes{
+
+		.codes {
 			border-radius: 0 !important;
 			left: 420px !important;
-			right: 10px !important; 
+			right: 10px !important;
 			width: 450px !important;
 			padding-left: 0px !important;
 			display: none;
 		}
-		pre{
+
+		pre {
 			padding-left: -20px !important;
 		}
-		code{
+
+		code {
 			padding-left: -20px !important;
 		}
-		.tempCont{
+
+		.tempCont {
 			display: block;
 		}
-		.settings{
+
+		.settings {
 			max-height: 400px;
 			width: 350px;
 			margin-left: 50px;
-			display: ;
-			border:0px solid green;
+			border: 0px solid green;
 			background-color: white;
 			position: absolute;
 			top: 140px;
-			-webkit-box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.04);
-			-moz-box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.04);
-			box-shadow: 13px 21px 22px 19px rgba(0,0,0,0.04);
+			-webkit-box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.04);
+			-moz-box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.04);
+			box-shadow: 13px 21px 22px 19px rgba(0, 0, 0, 0.04);
 			padding: 30px;
 			border-radius: 10px;
 			border-top: 5px solid darkorchid;
 		}
-		.settings h1{
+
+		.settings h1 {
 			font-size: 24px;
 		}
-		.form .row{
+
+		.form .row {
 			margin-top: 20px;
 		}
-		.form .row input{
+
+		.form .row input {
 			width: 95%;
 			margin-bottom: 10px;
 			height: 25px;
@@ -364,13 +435,15 @@
 			color: #4169e1;
 			margin-left: 5%;
 		}
-		.form .row input:focus{
+
+		.form .row input:focus {
 			border-bottom: 1px solid darkblue;
 		}
-		.form .row4 button{
+
+		.form .row4 button {
 			height: 30px;
 			width: 120px;
-			border:none;
+			border: none;
 			outline: none;
 			background-color: transparent;
 			border: 1px solid #4169e1;
@@ -378,63 +451,74 @@
 			cursor: pointer;
 			color: #4169e1;
 		}
-		.alert, .alertMsg{
+
+		.alert,
+		.alertMsg {
 			height: 40px;
-			border:1px solid green;
-			background:green;
+			border: 1px solid green;
+			background: green;
 			text-align: left;
 			margin-top: 10px;
 			margin-bottom: 10px;
 			display: none;
 
 		}
-		.alertMsg{
-			border:1px solid red ;
-			background: rgb(200,20,20,0.8);
+
+		.alertMsg {
+			border: 1px solid red;
+			background: rgb(200, 20, 20, 0.8);
 
 
 		}
-		.alertMsg p,.alert p{ 
+
+		.alertMsg p,
+		.alert p {
 			color: white !important;
 		}
-		.alert p,.alertMsg p{
+
+		.alert p,
+		.alertMsg p {
 			font-size: 16px;
 			padding-top: 10px;
 			padding-left: 20px;
 		}
-		.phone .volume{
+
+		.phone .volume {
 			height: 100px;
 			width: 7px;
-			background: rgba(0,0,0,0.9);
-			border:1px solid transparent;
+			background: rgba(0, 0, 0, 0.9);
+			border: 1px solid transparent;
 			position: absolute;
 			top: 100px;
 			left: -7px;
 			border-radius: 2px;
 		}
-		.phone .power{
+
+		.phone .power {
 			height: 50px;
 			width: 7px;
-			background: rgba(0,0,0,0.9);
-			border:1px solid transparent;
+			background: rgba(0, 0, 0, 0.9);
+			border: 1px solid transparent;
 			position: absolute;
 			top: 120px;
 			right: -7px;
 			border-radius: 2px;
 		}
-		.endSession{
+
+		.endSession {
 			position: absolute;
 			bottom: 10px;
 			right: 0;
-			border:none;
+			border: none;
 			background: transparent;
 			font-weight: bold;
 			margin-right: 10px;
 			cursor: pointer;
 			color: #4169e1 !important;
 		}
-		.copy{
-			border:none;
+
+		.copy {
+			border: none;
 			background: transparent;
 			font-weight: bold;
 			margin-right: 10px;
@@ -442,44 +526,91 @@
 			color: #4169e1 !important;
 			margin-top: -10px;
 		}
-		.nav{
-			height: 40px;width: 100%;position: fixed;top: 0;left: 0;background-color: white;box-shadow:-1px 6px 9px -4px rgba(0,0,0,0.06)
+
+		.nav {
+			height: 40px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: white;
+			box-shadow: -1px 6px 9px -4px rgba(0, 0, 0, 0.06)
 		}
-		.nav h1{
-			padding-top: 10px;padding-left: 30px;
+
+		.nav h1 {
+			padding-top: 10px;
+			padding-left: 30px;
 		}
-		ul{
+
+		ul {
 			position: absolute;
 			top: 10px;
 			right: 30px;
 
 		}
-		ul li{
+
+		ul li {
 			display: inline;
 			margin-right: 10px;
 		}
-		a{
+
+		a {
 			text-decoration: none;
 		}
-		.colorCont{
-			position: absolute;top: 0;left: 0;width: 100%;height: 250px;background:  cornflowerblue
+
+		.colorCont {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 250px;
+			background: cornflowerblue
 		}
-		.colorCont h1{
-			color: white;font-size: 20px;font-weight: 10;padding-top: 30px;padding-left: 60px;
+
+		.colorCont h1 {
+			color: white;
+			font-size: 20px;
+			font-weight: 10;
+			padding-top: 30px;
+			padding-left: 60px;
 		}
-		.colorCont p{
-			font-size: 16px;color: white;padding-left: 60px;margin-top: 20px;
+
+		.colorCont p {
+			font-size: 16px;
+			color: white;
+			padding-left: 60px;
+			margin-top: 20px;
 		}
-		.codes .header{
-			position: absolute;top: 0px;left: 0;width: 100%;height: 10%;border-bottom: 1px solid white;background: #6495ed;
+
+		.codes .header {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			width: 100%;
+			height: 10%;
+			border-bottom: 1px solid white;
+			background: #6495ed;
 		}
-		.codes .header h1{
-			color: white;padding-top: 20px;padding-left: 10px;
+
+		.codes .header h1 {
+			color: white;
+			padding-top: 20px;
+			padding-left: 10px;
 		}
-		.codes .container{
-			height: 90%;position: absolute;bottom: 0;left: 0;width: 100%;overflow-y: scroll;padding-top: -5px;background-color: #272822;
+
+		.codes .container {
+			height: 90%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow-y: scroll;
+			padding-top: -5px;
+			background-color: #272822;
 		}
-		.codes .header button{
-			float: right;margin-left: 10px;
+
+		.codes .header button {
+			float: right;
+			margin-left: 10px;
 			color: green !important;
 		}
